@@ -16,10 +16,10 @@ You'll see a lot of comments in the code for now; just trying to get the message
 - Click **Create new app** and make your app.
 - Go to **Settings** --> **Reveal Config Vars** and write
 
-Under **KEY** :
+   Under **KEY** :
 ```Discord Token```
 
-Under **VALUE** :
+   Under **VALUE** :
 ```insert_your_discord_token``` (follow [this](#your-bot-token) to get your token)
 - Click **Add**.
 - Click on [Deploy](https://imgur.com/2cgFYja.png).
