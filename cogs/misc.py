@@ -4,7 +4,7 @@ from main import MY_COLOR, PREFIX #we're using our main colour & prefix that we 
 
 #this is how to set up a basic cog
 
-class Ping(commands.Cog):
+class Misc(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot #you can assign more self variables here if you want
@@ -25,4 +25,4 @@ class Ping(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(Ping(bot))
+    bot.add_cog(Misc(bot))
