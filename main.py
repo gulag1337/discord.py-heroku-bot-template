@@ -5,9 +5,9 @@ import sys
 import traceback
 from discord.ext import commands
 
-TOKEN = os.getenv("DISCORD_TOKEN") #you must add a Config Vars in your Heroku app settings (Format - KEY:DISCORD_TOKEN, VALUE: your token)
+TOKEN = os.getenv("DISCORD_TOKEN") #you must add a Config Vars in your Heroku app settings (check the README.md)
 PREFIX = "$" #set your prefix here
-MY_COLOR = discord.Color.from_rgb(142, 224, 243) #set your main discord bot colour (for embeds, etc) here
+MY_COLOR = discord.Color.from_rgb(69, 4, 20) #set your main discord bot colour (for embeds, etc) here. Also, NICE!
 
 intents = discord.Intents().all() #only if you want to use all Privileged Gateway intents. Note : you must enable this on your dev portal (https://discord.com/developers/applications)!
 bot = commands.Bot(command_prefix=PREFIX, intents=intents)
@@ -18,7 +18,7 @@ bot.remove_command("help") #Removes the default help command, so you can set a c
 async def load(ctx, cog):
     try:
         bot.load_extension(f"cogs.{cog}")
-        await ctx.message.add_reaction('☑️')
+        await ctx.message.add_reaction('☑️') #so we can visually see it worked on Discord itself
     except:
         await ctx.send('**Error :**\n```py\n%s\n```' % traceback.format_exc())
 
@@ -40,6 +40,11 @@ async def reload(ctx, cog):
         await ctx.message.add_reaction('☑️')
     except:
         await ctx.send('**Error :**\n```py\n%s\n```' % traceback.format_exc())
+        
+@bot.event #this is a special bot event; you can code stuff to do if this event is called. More events here: https://discordpy.readthedocs.io/en/stable/api.html#event-reference
+async def on_ready():
+    print ("Your bot is up and ready to go!")
+    await bot.change_presence(activity=discord.Game(name="with Discord!"))
 
 for filename in os.listdir("./cogs"): #loads the cog files located in the cogs folder
     if filename.endswith(".py"):
