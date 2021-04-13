@@ -1,7 +1,7 @@
 # discord.py-heroku-bot-template
 ## A [discord.py](https://discordpy.readthedocs.io/en/stable/) bot template, ready to host on Heroku.
 
-![Heroku|App](https://imgur.com/hKbTPuz.png)
+![Heroku|App](http://i.imgur.com/hKbTPuz.png)
 
 I'll add more features later on.
 You'll see a lot of comments in the code for now; just trying to get the message across as well as possible.
@@ -15,8 +15,10 @@ You'll see a lot of comments in the code for now; just trying to get the message
 - Make a [Heroku](https://signup.heroku.com/) account.
 - Click **Create new app** and make your app.
 - Go to **Settings** --> **Reveal Config Vars** and write
+
 Under **KEY** :
 ```Discord Token```
+
 Under **VALUE** :
 ```insert_your_discord_token``` (follow [this](#your-bot-token) to get your token)
 - Click **Add**.
@@ -45,8 +47,9 @@ The usual causes are :
 - Code that is irrelevant to Ubuntu :
 
 >**What OS does Heroku use?**
-Ubuntu
-~On Heroku, this is called the "stack"—an operating system image curated and maintained by Heroku. The stack is based on Ubuntu, the open source Linux distribution.
+
+>Ubuntu
+>~On Heroku, this is called the "stack"—an operating system image curated and maintained by Heroku. The stack is based on Ubuntu, the open source Linux distribution.
 
 For example, datetime formatting on Windows would be :
 ```py
