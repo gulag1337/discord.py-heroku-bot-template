@@ -31,6 +31,7 @@ You'll see a lot of comments in the code for now; just trying to get the message
 - Under **Dyno formation**, click **Configure Dynos**
 - It should look [like this](https://imgur.com/SL8M1bF.png) (give it some time & refresh).
 - Click on the ✏️, and [turn it on](https://imgur.com/NfvzOzU.png).
+
 You're all set now! 👏 
 Give it some time, and hopefully you'll see your bot online on Discord.
 
