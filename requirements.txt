@@ -1,0 +1,3 @@
+discord.py
+//This is where you add the external modules you need to import in your bot code, just write each module on a new line, for example :
+//beautifulsoup4
